@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+    }
+
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+    }
+
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+    }
+
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 35px;
+    }
+
+    .one {
+      width: 160px;
+      height: 160px;
+      position: relative;
+    }
+
+    .two {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    .fade {
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    span.highlight {
+      background-color: #ffffd0;
+    }
+
+    /* Light responsiveness improvement over the classic fixed-width layout */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <title>Zezhou Wang</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <script src="assets/js/utils.js"></script>
+</head>
+
+<body>
+  <table width="100%" border="0" align="center" cellspacing="0" cellpadding="0" style="max-width: 800px;">
+    <tr>
+      <td>
+
+        <!-- Intro: name, bio, photo -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="67%" valign="middle">
+              <p align="center">
+                <name>Zezhou Wang</name>
+              </p>
+              <p>
+                <!-- TODO: Replace this bio with your own. -->
+                I am a <a href="#">Ph.D. student</a> at <a href="#">Your University</a>.
+                My research interests include <strong>[your research areas]</strong>.
+                Previously, I obtained my degree at <a href="#">Your Alma Mater</a>.
+                I am broadly interested in building robust and efficient systems.
+              </p>
+              <p align="center">
+                <a href="mailto:you@example.com">Email</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="assets/files/curriculum_vitae.pdf">CV</a> &nbsp;/&nbsp;
+                <a href="https://github.com/asd123www">GitHub</a>
+              </p>
+            </td>
+            <td width="33%">
+              <img src="assets/img/avatar.png" alt="Zezhou Wang" style="width: 100%; border-radius: 8px;">
+            </td>
+          </tr>
+        </table>
+
+
+        <!-- News -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <heading>News</heading>
+              <ul>
+                <li> <b>2026-06</b> Launched my new personal website. </li>
+                <li> <b>2026-01</b> Add your latest news here. </li>
+                <li> <b>2025-09</b> Another exciting update goes here. </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+
+        <!-- Research -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <heading>Research</heading>
+              <p>
+                <!-- TODO: Optionally describe your research focus here. -->
+                Below are some of my selected works. Representative papers are <span class="highlight">highlighted</span>.
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+          <!-- Each publication is rendered by createProjectElement() in assets/js/utils.js.
+               Duplicate the <tr> + <script> block below for every paper. -->
+
+          <tr>
+            <td width="25%" id="paper1-img"></td>
+            <td valign="top" width="75%" id="paper1-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "paper1", {
+              title: "Your Awesome Paper Title Goes Here",
+              paper_url: "https://arxiv.org/",
+              authors: "<strong>Zezhou Wang</strong>, Coauthor One, Coauthor Two.",
+              conference: "Venue / Year",
+              image: "assets/img/teaser_example.png",
+              highlight: true,
+              others: null
+            });
+          </script>
+
+          <tr>
+            <td width="25%" id="paper2-img"></td>
+            <td valign="top" width="75%" id="paper2-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "paper2", {
+              title: "Another Paper Title Goes Here",
+              paper_url: "https://arxiv.org/",
+              authors: "Coauthor One, <strong>Zezhou Wang</strong>, Coauthor Two.",
+              conference: "Venue / Year",
+              image: "assets/img/teaser_example_2.png",
+              others: "<a href='#'>code</a> / <a href='#'>project page</a>"
+            });
+          </script>
+
+        </table>
+
+
+        <!-- Footer -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td>
+              <br>
+              <p align="right">
+                <font size="2">
+                  Template adapted from <a href="https://github.com/jonbarron/website">Jon Barron</a>.
+                </font>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
