@@ -17,9 +17,15 @@ function createProjectElement(id, project) {
 
   const titleClass = project.highlight ? ' class="highlight"' : "";
 
+  const titleEl = `<papertitle${titleClass}>${project.title}</papertitle>`;
+  // Papers still in submission may not have a public link yet.
+  const titleHtml = project.paper_url
+    ? `<a href="${project.paper_url}">${titleEl}</a>`
+    : titleEl;
+
   const html_img = `<img src='${project.image}' style="max-width: 160px;">`;
   const html_txt = `<p>
-      <a href="${project.paper_url}"><papertitle${titleClass}>${project.title}</papertitle></a>
+      ${titleHtml}
       <br>
       ${project.authors}
       <br>

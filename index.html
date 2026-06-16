@@ -141,8 +141,8 @@
             <td width="100%" valign="middle">
               <heading>Research</heading>
               <p>
-                <!-- TODO: Optionally describe your research focus here. -->
-                Below are some of my selected works. Representative papers are <span class="highlight">highlighted</span>.
+                Below is a list of my publications (<sup>*</sup> denotes equal contribution).
+                <span class="highlight">Highlighted</span> titles are works where I am a (co-)first author.
               </p>
             </td>
           </tr>
@@ -151,38 +151,79 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
           <!-- Each publication is rendered by createProjectElement() in assets/js/utils.js.
-               Duplicate the <tr> + <script> block below for every paper. -->
+               Duplicate the <tr> + <script> block below for every paper. To add a thumbnail,
+               add a second <td ... id="<id>-img"> cell and pass image: "assets/img/<file>.png". -->
 
           <tr>
-            <td width="25%" id="paper1-img"></td>
-            <td valign="top" width="75%" id="paper1-txt"></td>
+            <td valign="top" id="fm2-txt"></td>
           </tr>
           <script type="text/javascript">
             createProjectElement(
-              id = "paper1", {
-              title: "Your Awesome Paper Title Goes Here",
-              paper_url: "https://arxiv.org/",
-              authors: "<strong>Zezhou Wang</strong>, Coauthor One, Coauthor Two.",
-              conference: "Venue / Year",
-              image: "assets/img/teaser_example.png",
+              id = "fm2", {
+              title: "FM2: Fast Live VM Migration in CXL Memory Pools",
+              paper_url: null,
+              authors: "<strong>Zezhou Wang</strong><sup>*</sup>, Jonggyu Park<sup>*</sup>, Shihang Li, Pedro Henrique Penna, Thomas Anderson, Simon Peter",
+              conference: "In submission to SIGOPS ATC 2026",
               highlight: true,
               others: null
             });
           </script>
 
           <tr>
-            <td width="25%" id="paper2-img"></td>
-            <td valign="top" width="75%" id="paper2-txt"></td>
+            <td valign="top" id="vescale-txt"></td>
           </tr>
           <script type="text/javascript">
             createProjectElement(
-              id = "paper2", {
-              title: "Another Paper Title Goes Here",
-              paper_url: "https://arxiv.org/",
-              authors: "Coauthor One, <strong>Zezhou Wang</strong>, Coauthor Two.",
-              conference: "Venue / Year",
-              image: "assets/img/teaser_example_2.png",
-              others: "<a href='#'>code</a> / <a href='#'>project page</a>"
+              id = "vescale", {
+              title: "veScale-FSDP: Flexible and High-Performance FSDP at Scale",
+              paper_url: "https://arxiv.org/abs/2602.22437",
+              authors: "<strong>Zezhou Wang</strong><sup>*</sup>, Youjie Li<sup>*</sup>, Zhiqi Lin<sup>*</sup>, Jiacheng Yang<sup>*</sup>, Cong Xie, Guanyu Feng, Zheng Zhong, Ziyue Huang, Hongyu Zhu, Zhi Zhang, Yanghua Peng, Xin Liu",
+              conference: "MLSys 2026",
+              highlight: true,
+              others: null
+            });
+          </script>
+
+          <tr>
+            <td valign="top" id="forestcoll-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "forestcoll", {
+              title: "ForestColl: Throughput-Optimal Collective Communications on Heterogeneous Network Fabrics",
+              paper_url: "https://www.usenix.org/conference/nsdi26/presentation/zhao-liangyu",
+              authors: "Liangyu Zhao, Saeed Maleki, Yuanhong Wang, <strong>Zezhou Wang</strong>, Ziyue Yang, Hossein Pourreza, Arvind Krishnamurthy",
+              conference: "USENIX NSDI 2026",
+              others: null
+            });
+          </script>
+
+          <tr>
+            <td valign="top" id="electrode-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "electrode", {
+              title: "Electrode: Accelerating Distributed Protocols with eBPF",
+              paper_url: "https://www.usenix.org/conference/nsdi23/presentation/zhou",
+              authors: "Yang Zhou<sup>*</sup>, <strong>Zezhou Wang</strong><sup>*</sup>, Sowmya Dharanipragada, Minlan Yu",
+              conference: "USENIX NSDI 2023",
+              highlight: true,
+              others: null
+            });
+          </script>
+
+          <tr>
+            <td valign="top" id="skgradient-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "skgradient", {
+              title: "SK-Gradient: Efficient Communication for Distributed Machine Learning with Data Sketch",
+              paper_url: "https://ieeexplore.ieee.org/document/10184851",
+              authors: "Jie Gui, Yuchen Song, <strong>Zezhou Wang</strong>, Chenhong He, Qun Huang",
+              conference: "IEEE ICDE 2023",
+              others: null
             });
           </script>
 
